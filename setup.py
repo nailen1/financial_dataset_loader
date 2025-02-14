@@ -6,6 +6,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         'aws-s3-controller',
+        'string-date-controller',
     ],
     author='June Young Park',
     author_email='juneyoungpaak@gmail.com',
