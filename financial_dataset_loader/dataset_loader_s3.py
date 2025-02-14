@@ -13,6 +13,16 @@ def load_menu2160_snapshot(date_ref):
     df = open_df_in_bucket_by_regex(bucket=BUCKET_SYSTEM, bucket_prefix=BUCKET_PREFIX['2160-snapshot'], regex=regex)
     return df
 
+def load_menu2205(fund_code, date_ref):
+    regex = format_regex_for_snapshot(menu_code='2205', fund_code=fund_code, date_ref=date_ref)
+    df = open_df_in_bucket_by_regex(bucket=BUCKET_SYSTEM, bucket_prefix=BUCKET_PREFIX['2205'], regex=regex)
+    return df
+
+def load_menu2205_snapshot(date_ref):
+    regex = format_regex_for_snapshot(menu_code='2205', fund_code='000000', date_ref=date_ref)
+    df = open_df_in_bucket_by_regex(bucket=BUCKET_SYSTEM, bucket_prefix=BUCKET_PREFIX['2205-snapshot'], regex=regex)
+    return df
+
 def load_menu8186_snapshot(date_ref):
     regex = format_regex_for_snapshot(menu_code='8186', fund_code='000000', date_ref=date_ref)
     df = open_df_in_bucket_by_regex(bucket=BUCKET_SYSTEM, bucket_prefix=BUCKET_PREFIX['8186-snapshot'], regex=regex)
