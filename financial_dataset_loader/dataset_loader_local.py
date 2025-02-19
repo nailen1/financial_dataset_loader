@@ -32,7 +32,7 @@ def load_menu4165_local(fund_code, date_ref):
     df = open_df_in_file_folder_by_regex(file_folder=FILE_FOLDER['4165'], regex=regex)
     return df
 
-def load_menu4165_snapshot_local(fund_code, date_ref):
+def load_menu4165_snapshot_local(fund_code, date_ref=None):
     regex = format_regex_for_snapshot(menu_code='4165', fund_code=fund_code, date_ref=date_ref)
     df = open_df_in_file_folder_by_regex(file_folder=FILE_FOLDER['4165'], regex=regex)
     return df
@@ -51,3 +51,15 @@ def load_market_local(market_name, date_ref=None):
     regex = format_regex_for_market(market_name=market_name, date_ref=date_ref)
     df = open_df_in_file_folder_by_regex(file_folder=FILE_FOLDER['market'], regex=regex)
     return df
+
+def load_menu_local(menu_code, fund_code, date_ref=None):
+    regex = format_regex_for_snapshot(menu_code=menu_code, fund_code=fund_code, date_ref=date_ref)
+    df = open_df_in_file_folder_by_regex(file_folder=FILE_FOLDER[menu_code], regex=regex)
+    return df
+
+def load_menu_snapshot_local(menu_code, date_ref=None):
+    regex = format_regex_for_snapshot(menu_code=menu_code, fund_code='000000', date_ref=date_ref)
+    df = open_df_in_file_folder_by_regex(file_folder=FILE_FOLDER[menu_code], regex=regex)
+    return df
+
+

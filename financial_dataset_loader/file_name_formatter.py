@@ -30,3 +30,11 @@ def format_regex_for_market(market_name, date_ref=None):
     else:
         regex = f'dataset-bbg-{market_name}_market-'
     return regex
+
+def format_regex_for_index_market(ticker_bbg_index, date_ref=None):
+    if date_ref:
+        date_ref = date_ref.replace('-', '')
+        regex = f'dataset-bbg-{ticker_bbg_index}-market-at{date_ref}'
+    else:
+        regex = f'dataset-bbg-{ticker_bbg_index}-market-'
+    return regex

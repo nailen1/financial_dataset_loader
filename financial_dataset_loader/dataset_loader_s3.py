@@ -32,7 +32,7 @@ def load_menu4165_s3(fund_code, date_ref):
     df = open_df_in_bucket_by_regex(bucket=BUCKET_SYSTEM, bucket_prefix=BUCKET_PREFIX['4165'], regex=regex)
     return df
 
-def load_menu4165_snapshot_s3(fund_code, date_ref):
+def load_menu4165_snapshot_s3(fund_code, date_ref=None):
     regex = format_regex_for_snapshot(menu_code='4165', fund_code=fund_code, date_ref=date_ref)
     df = open_df_in_bucket_by_regex(bucket=BUCKET_SYSTEM, bucket_prefix=BUCKET_PREFIX['4165'], regex=regex)
     return df
@@ -50,4 +50,14 @@ def load_currency_s3(ticker_bbg_currency):
 def load_market_s3(market_name, date_ref=None):
     regex = format_regex_for_market(market_name=market_name, date_ref=date_ref)
     df = open_df_in_bucket_by_regex(bucket=BUCKET_BBG, bucket_prefix=BUCKET_PREFIX['market'], regex=regex)
+    return df
+
+def load_menu_s3(menu_code, fund_code, date_ref=None):
+    regex = format_regex_for_snapshot(menu_code=menu_code, fund_code=fund_code, date_ref=date_ref)
+    df = open_df_in_bucket_by_regex(bucket=BUCKET_SYSTEM, bucket_prefix=BUCKET_PREFIX[menu_code], regex=regex)
+    return df
+
+def load_menu_snapshot_s3(menu_code, date_ref=None):
+    regex = format_regex_for_snapshot(menu_code=menu_code, fund_code='000000', date_ref=date_ref)
+    df = open_df_in_bucket_by_regex(bucket=BUCKET_SYSTEM, bucket_prefix=BUCKET_PREFIX[menu_code], regex=regex)
     return df

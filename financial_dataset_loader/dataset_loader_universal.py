@@ -73,3 +73,10 @@ def load_market(market_name, date_ref=None, option_data_source=DEFAULT_OPTION_DA
         'local': load_market_local
     }
     return mapping_option[option_data_source](market_name, date_ref)
+
+def load_menu_snapshot(menu_code, option_data_source=DEFAULT_OPTION_DATA_SOURCE):
+    mapping_option = {
+        's3': load_menu_snapshot_s3,
+        'local': load_menu_snapshot_local
+    }
+    return mapping_option[option_data_source](menu_code)

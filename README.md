@@ -69,6 +69,8 @@ df = dataset_loader_s3.load_currency(ticker_bbg_currency='USDKRW Curncy')
 
 - Python >= 3.11
 - aws-s3-controller (for S3 functionality)
+- string-date-controller (for date conversion functionality)
+- shining_pebbles (for pseudo database functionality)
 
 ## License
 
