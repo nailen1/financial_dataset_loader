@@ -46,7 +46,7 @@ def load_menu4165(fund_code, date_ref, option_data_source=DEFAULT_OPTION_DATA_SO
     }
     return mapping_option[option_data_source](fund_code, date_ref)
 
-def load_menu4165_snapshot(fund_code, date_ref, option_data_source=DEFAULT_OPTION_DATA_SOURCE):
+def load_menu4165_snapshot(fund_code, date_ref=None, option_data_source=DEFAULT_OPTION_DATA_SOURCE):
     mapping_option = {
         's3': load_menu4165_snapshot_s3,
         'local': load_menu4165_snapshot_local
@@ -74,9 +74,16 @@ def load_market(market_name, date_ref=None, option_data_source=DEFAULT_OPTION_DA
     }
     return mapping_option[option_data_source](market_name, date_ref)
 
-def load_menu_snapshot(menu_code, option_data_source=DEFAULT_OPTION_DATA_SOURCE):
+def load_menu(menu_code, fund_code, date_ref=None, option_data_source=DEFAULT_OPTION_DATA_SOURCE):
+    mapping_option = {
+        's3': load_menu_s3,
+        'local': load_menu_local
+    }
+    return mapping_option[option_data_source](menu_code, fund_code, date_ref)
+
+def load_menu_snapshot(menu_code, date_ref=None, option_data_source=DEFAULT_OPTION_DATA_SOURCE):
     mapping_option = {
         's3': load_menu_snapshot_s3,
         'local': load_menu_snapshot_local
     }
-    return mapping_option[option_data_source](menu_code)
+    return mapping_option[option_data_source](menu_code, date_ref)
