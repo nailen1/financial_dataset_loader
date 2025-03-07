@@ -2,11 +2,11 @@ from setuptools import setup, find_packages
 
 setup(
     name='financial_dataset_loader',
-    version='0.2.4',
+    version='0.2.5',
     packages=find_packages(),
     install_requires=[
-        'aws-s3-controller',
-        'string-date-controller',
+        'aws-s3-controller>=0.7.4',
+        'string_date_controller>=0.1.1',
         'shining_pebbles',
     ],
     author='June Young Park',
