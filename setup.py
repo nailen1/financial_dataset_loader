@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='financial_dataset_loader',
-    version='0.2.5',
+    version='0.2.6',
     packages=find_packages(),
     install_requires=[
         'aws-s3-controller>=0.7.4',
