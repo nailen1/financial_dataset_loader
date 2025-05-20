@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 
+# Read requirements.txt
+with open('requirements.txt') as f:
+    required = f.read().splitlines()
+
 setup(
     name='financial_dataset_loader',
-    version='0.2.6',
+    version='0.2.7',
     packages=find_packages(),
-    install_requires=[
-        'aws-s3-controller>=0.7.4',
-        'string_date_controller>=0.1.1',
-        'shining_pebbles',
-    ],
+    install_requires=required,
     author='June Young Park',
     author_email='juneyoungpaak@gmail.com',
     description='A Python module for loading financial datasets from various sources',
