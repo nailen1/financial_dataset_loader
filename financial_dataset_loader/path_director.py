@@ -28,6 +28,7 @@ BUCKET_PREFIX = {
     '2160-snapshot': 'dataset-menu2160-snapshot',
     '2205': 'dataset-menu2205',
     '2205-snapshot': 'dataset-menu2205-snapshot',
+    '2206': 'dataset-menu2206',
     '4165': 'dataset-menu4165',
     '8186-snapshot': 'dataset-menu8186-snapshot',
     '2110': 'dataset-menu2110',

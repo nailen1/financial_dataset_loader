@@ -5,7 +5,7 @@ def format_regex_for_snapshot(menu_code, fund_code, date_ref=None):
         date_ref = date_ref.replace('-', '')
         regex = f'menu{menu_code}-code{fund_code}-at{date_ref}'
     else:
-        regex = f'menu{menu_code}-code{fund_code}'
+        regex = f'menu{menu_code}-code{fund_code}-at'
     return regex
 
 def format_regex_for_timeseries(menu_code, fund_code):

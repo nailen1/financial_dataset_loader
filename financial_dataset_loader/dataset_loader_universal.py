@@ -32,6 +32,13 @@ def load_menu2205_snapshot(date_ref=None, option_data_source=DEFAULT_OPTION_DATA
     }
     return mapping_option[option_data_source](date_ref)
 
+def load_menu2206(date_ref=None, option_data_source=DEFAULT_OPTION_DATA_SOURCE):
+    mapping_option = {
+        's3': load_menu2206_s3,
+        'local': load_menu2206_local
+    }
+    return mapping_option[option_data_source](date_ref)
+
 def load_menu8186_snapshot(date_ref=None, option_data_source=DEFAULT_OPTION_DATA_SOURCE):
     mapping_option = {
         's3': load_menu8186_snapshot_s3,
