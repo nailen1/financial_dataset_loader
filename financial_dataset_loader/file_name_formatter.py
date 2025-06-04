@@ -20,7 +20,7 @@ def format_regex_for_period(menu_code, fund_code, start_date=None, end_date=None
     return regex
 
 def format_regex_for_bbg_price(ticker_bbg):
-    regex = f'dataset-timeseries-bbg-{ticker_bbg}-PX_LAST'
+    regex = f'dataset-bbg-{ticker_bbg}-PX_LAST'
     return regex
 
 def format_regex_for_market(market_name, date_ref=None):

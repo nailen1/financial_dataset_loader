@@ -39,4 +39,5 @@ BUCKET_PREFIX = {
     'index': 'dataset-index',
     'currency': 'dataset-currency',
     'equity': 'dataset-equity',
+    'timeseries': 'dataset-timeseries'
 }

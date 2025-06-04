@@ -44,12 +44,12 @@ def load_menu4165_snapshot_s3(fund_code, date_ref=None):
 
 def load_index_s3(ticker_bbg_index):
     regex = format_regex_for_bbg_price(ticker_bbg=ticker_bbg_index)
-    df = open_df_in_bucket_by_regex(bucket=BUCKET_BBG, bucket_prefix=BUCKET_PREFIX['index'], regex=regex)
+    df = open_df_in_bucket_by_regex(bucket=BUCKET_BBG, bucket_prefix=BUCKET_PREFIX['timeseries'], regex=regex)
     return df
 
 def load_currency_s3(ticker_bbg_currency):
     regex = format_regex_for_bbg_price(ticker_bbg=ticker_bbg_currency)
-    df = open_df_in_bucket_by_regex(bucket=BUCKET_BBG, bucket_prefix=BUCKET_PREFIX['currency'], regex=regex)
+    df = open_df_in_bucket_by_regex(bucket=BUCKET_BBG, bucket_prefix=BUCKET_PREFIX['timeseries'], regex=regex)
     return df
 
 def load_market_s3(market_name, date_ref=None):

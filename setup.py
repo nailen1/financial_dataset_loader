@@ -6,7 +6,7 @@ with open('requirements.txt') as f:
 
 setup(
     name='financial_dataset_loader',
-    version='0.2.7',
+    version='0.2.8',
     packages=find_packages(),
     install_requires=required,
     author='June Young Park',

@@ -2,14 +2,12 @@
 
 A Python module for efficiently loading financial datasets from various sources including local storage and AWS S3. Designed for streamlined data management in quantitative finance applications.
 
-## Version Updates
+## Version History
 
-### v0.2.7 (2025-05-20)
-- Updated setup.py to load dependencies from requirements.txt
-- Improved package installation process
-
-### v0.2.6
-- Previous stable release
+### v0.2.8 (2025-06-04)
+- Updated path handling for improved file access
+- Enhanced directory structure for dataset organization
+- Standardized path management across local and S3 storage
 
 ## Features
 
